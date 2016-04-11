@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xmodmap -e "keysym Pause = Insert" 2>/dev/null
+
