@@ -1,7 +1,7 @@
-#!/bin/bash -x
+#!/bin/bash
 set -o errexit -o nounset -o pipefail
 
-OPENSUSE_VERSION=${OPENSUSE_VERSION:-"tumbleweed"}
+OPENSUSE_VERSION=${OPENSUSE_VERSION:-"openSUSE_Factory"}
 
 function globals {                                                                                                                                            
   export LC_ALL=en_US.UTF-8                  # A locale that works consistently                                                                               
@@ -12,11 +12,11 @@ function addRepos {
 
 #  sudo zypper ar --refresh http://download.opensuse.org/repositories/Cloud:/Tools/${OPENSUSE_VERSION}/ ext:cloud:tools
 #  sudo zypper ar --refresh http://download.opensuse.org/repositories/Virtualization/${OPENSUSE_VERSION}/ ext:virtualization
-  sudo zypper ar --refresh http://download.opensuse.org/repositories/devel:/tools/${OPENSUSE_VERSION}/ ext:devel:tools
+#  sudo zypper ar --refresh http://download.opensuse.org/repositories/devel:/tools/${OPENSUSE_VERSION}_ARM/ ext:devel:tools
     # cloc
-  sudo zypper ar --refresh http://download.opensuse.org/repositories/devel:/tools:/scm/${OPENSUSE_VERSION}/ ext:devel:tools:scm
+#  sudo zypper ar --refresh http://download.opensuse.org/repositories/devel:/tools:/scm/${OPENSUSE_VERSION}/ ext:devel:tools:scm
     # git-core tig
-  sudo zypper ar --refresh http://download.opensuse.org/repositories/utilities/${OPENSUSE_VERSION}/ ext:utilitities
+#  sudo zypper ar --refresh http://download.opensuse.org/repositories/utilities/${OPENSUSE_VERSION}/ ext:utilities
     # jq ncdu tmux 
   
   sudo zypper ar --refresh http://dl.google.com/linux/chrome/rpm/stable/x86_64 google-chrome
@@ -28,7 +28,7 @@ function addRepos {
 function installPackages() {
 
   WHITELIST=""
-  WHITELIST="${WHITELIST} cloc"
+#  WHITELIST="${WHITELIST} cloc"
   WHITELIST="${WHITELIST} docker"
   WHITELIST="${WHITELIST} docker-bash-completion"
   WHITELIST="${WHITELIST} git-core"
@@ -44,9 +44,21 @@ function installPackages() {
   WHITELIST="${WHITELIST} tree"
   WHITELIST="${WHITELIST} xclip"
 
-  zypper install ${WHITELIST}
+  # mesos build deps
+  WHITELIST="${WHITELIST} automake"
+  WHITELIST="${WHITELIST} gcc"
+  WHITELIST="${WHITELIST} gcc-c++"
+  WHITELIST="${WHITELIST} zlib-devel"
+  WHITELIST="${WHITELIST} libcurl-devel"
+  WHITELIST="${WHITELIST} libapr1-devel"
+  WHITELIST="${WHITELIST} subversion-devel"
+  WHITELIST="${WHITELIST} cyrus-sasl-devel"
+  WHITELIST="${WHITELIST} libtool"
+
+
+  sudo zypper --non-interactive install --no-recommends ${WHITELIST}
  
-  pip install httpie
+  sudo pip install httpie
   
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
@@ -81,8 +93,8 @@ function purgePackages() {
   BLACKLIST="${BLACKLIST} libreoffice-icon-theme-oxygen"
   BLACKLIST="${BLACKLIST} libreoffice-share-linker"
   
-  zypper remove --clean-deps ${BLACKLIST}
-  zypper addlock ${BLACKLIST}
+  sudo zypper remove --clean-deps ${BLACKLIST}
+  sudo zypper addlock ${BLACKLIST}
   
 }
   
