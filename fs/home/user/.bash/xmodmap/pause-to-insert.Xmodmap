@@ -1,0 +1,2 @@
+! remap pause/break to be insert
+keysym Pause = Insert
