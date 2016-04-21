@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-dir=~/.bash
+export dir=~/.bash
 
 PATH=""
 PATH="$PATH:$HOME/bin"
@@ -27,3 +27,4 @@ done
 source $dir/PS1
 source $dir/keymap
 
+unset dir

@@ -1,6 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+
+dir=${dir:-$(pwd -P)}
 
 for f in $(ls -1 $dir/xmodmap/); do
-  xmodmap $f 2>/dev/null
+#  xmodmap $dir/xmodmap/$f 
+  xmodmap $dir/xmodmap/$f 2>/dev/null
 done
 
