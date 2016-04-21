@@ -1,0 +1,20 @@
+#!/bin/bash -x
+set -o errexit -o nounset -o pipefail
+
+function main {(
+
+  local dir=${PWD}
+  local arg="${1:-}"
+  if [ -n "${arg}" ]; then
+    if [[ ${arg} =~ ^/.* ]]; then
+      dir="$1"
+    else
+      dir="${PWD}/$arg"
+    fi
+  fi
+
+  docker run --rm -v ${dir}:/data mribeiro/cloc .
+
+)}
+
+main "$@"
