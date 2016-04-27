@@ -4,6 +4,21 @@ function mkdircd() {
     mkdir $1 && cd $1
 }
 
+# Inspired by: http://stackoverflow.com/questions/1763891/can-stdout-and-stderr-use-different-colors-under-xterm-konsole
+function errRed() {(
+  (
+    set -o pipefail
+    "$@" 2>&1>&3 | sed $'s,.*,\e[31m&\e[m,'>&2
+  )3>&1
+)}
+
+function stdColor() {(
+    set -o pipefail;
+    ("$@" 2>&1>&3 | sed $'s,.*,\e[31m&\e[m,' >&2) 3>&1 \
+                  | sed $'s,.*,\e[32m&\e[m,'
+)}
+
+
 function hashstring() {
     echo -n $1 | openssl dgst -md5
 }
