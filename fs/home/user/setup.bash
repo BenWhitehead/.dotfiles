@@ -38,7 +38,8 @@ function installPackages() {
   WHITELIST="${WHITELIST} iotop"
   WHITELIST="${WHITELIST} jq"
   WHITELIST="${WHITELIST} ncdu"
-  WHITELIST="${WHITELIST} python-pip"
+  WHITELIST="${WHITELIST} python-pip"     # needed by httpie
+  WHITELIST="${WHITELIST} python3-curses" # needed by httpie
   WHITELIST="${WHITELIST} tig"
   WHITELIST="${WHITELIST} tmux"
   WHITELIST="${WHITELIST} tree"
