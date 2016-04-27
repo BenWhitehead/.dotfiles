@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 set -o errexit -o nounset -o pipefail
 
 function main {(
@@ -13,6 +13,7 @@ function main {(
     fi
   fi
 
+  echo "${dir}"
   docker run --rm -v ${dir}:/data mribeiro/cloc .
 
 )}
