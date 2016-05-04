@@ -75,6 +75,7 @@ function purgePackages() {
   BLACKLIST="${BLACKLIST} libmysqld18"
   BLACKLIST="${BLACKLIST} akonadi"
   BLACKLIST="${BLACKLIST} akonadi-runtime"
+  BLACKLIST="${BLACKLIST} akonadi-server"
   BLACKLIST="${BLACKLIST} korganizer"
   BLACKLIST="${BLACKLIST} kontact"
   BLACKLIST="${BLACKLIST} kmail"
@@ -93,6 +94,9 @@ function purgePackages() {
   BLACKLIST="${BLACKLIST} libreoffice-writer"
   BLACKLIST="${BLACKLIST} libreoffice-icon-theme-oxygen"
   BLACKLIST="${BLACKLIST} libreoffice-share-linker"
+
+  BLACKLIST="${BLACKLIST} mariadb"
+  BLACKLIST="${BLACKLIST} mariadb-client"
   
   sudo zypper remove --clean-deps ${BLACKLIST}
   sudo zypper addlock ${BLACKLIST}
