@@ -1,0 +1,11 @@
+[Unit]
+Description=Powertop tunings
+
+[Service]
+Type=oneshot
+Environment=TERMINFO=/etc/terminfo
+Environment=TERM=linux
+ExecStart=/usr/sbin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target
