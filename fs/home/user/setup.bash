@@ -123,6 +123,9 @@ function linkItems {
 
     rm -rf .tmux.conf
     ln -s ${scriptDir}/.tmux.conf
+ 
+    rm -rf .gitconfig
+    ln -s ${scriptDir}/.gitconfig
   )
 
   (
