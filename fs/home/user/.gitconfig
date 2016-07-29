@@ -1,0 +1,21 @@
+[user]
+	name = BenWhitehead
+	email = BenWhitehead@users.noreply.github.com
+[push]
+	default = simple
+[core]
+	autocrlf = input
+  ignorecase = false
+[color]
+	whitespace = trailing-space,space-before-tab,tab-in-indent
+[color "diff"]
+    whitespace = blue reverse
+[diff]
+    algorithm = patience
+    renames = copies
+# When comparing zipped files, unzip them first to compare the contents
+[diff "zip"]
+    textconv = unzip -c -a
+
+[alias]
+    co-pr = "!f() { git fetch ${2:-origin} pull/$1/head:pull-$1 && git checkout pull-$1; }; f"
