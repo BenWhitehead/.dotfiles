@@ -49,6 +49,8 @@ syntax on
 colorscheme torte
 highlight Search ctermbg=DarkMagenta
 
+noremap q <Nop>
+
 " skeletons
 function! SKEL_spec()
 	0r /usr/share/vim/current/skeletons/skeleton.spec
