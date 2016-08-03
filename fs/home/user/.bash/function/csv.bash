@@ -5,10 +5,10 @@ function csvToTsv {
 }
 
 function readcsv {
-  column -t -s ',' ${1:--} | less -S -# 10
+  column -t -s ',' ${1} | less -S -# 10
 }
 
 function readtsv {
-  column -t -s $'\t' ${1:--} | less -S -# 10
+  column -t -s $'\t' ${1} | less -S -# 10
 }
 
