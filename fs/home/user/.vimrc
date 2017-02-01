@@ -47,7 +47,7 @@ set nowrap
 set hlsearch
 syntax on
 colorscheme torte
-highlight Search ctermbg=DarkMagenta
+highlight Search ctermbg=DarkMagenta ctermfg=White
 
 noremap q <Nop>
 
