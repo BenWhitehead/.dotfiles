@@ -7,8 +7,6 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 alias .......='cd ../../../../../../'
 
-alias l='ls -l'
-
 alias unzipall='for z in *.zip; do unzip $z;done'
 
 # File operations
