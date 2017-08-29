@@ -3,7 +3,8 @@
 _ls () 
 { 
     local IFS=' ';
-    command ls $LS_OPTIONS ${1+"$@"}
+#    command ls $LS_OPTIONS ${1+"$@"}
+    command exa $EXA_OPTIONS ${1+"$@"}
 }
 _ls_ () 
 { 
