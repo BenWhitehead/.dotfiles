@@ -6,16 +6,19 @@
 [core]
 	autocrlf = input
   ignorecase = false
+  pager = cat
 [color]
 	whitespace = trailing-space,space-before-tab,tab-in-indent
 [color "diff"]
-    whitespace = blue reverse
+  whitespace = blue reverse
 [diff]
-    algorithm = patience
-    renames = copies
+  algorithm = patience
+  renames = copies
 # When comparing zipped files, unzip them first to compare the contents
 [diff "zip"]
-    textconv = unzip -c -a
+  textconv = unzip -c -a
+[pager]
+  diff = less
 
 [alias]
     co-pr = "!f() { git fetch ${2:-origin} pull/$1/head:pull-$1 && git checkout pull-$1; }; f"
