@@ -11,4 +11,5 @@ alias gfa='g fetch --all'
 alias gfat='gfa --tags'
 alias gfap='gfa --prune'
 alias gp='git pull'
+alias gr='git remote -v'
 
