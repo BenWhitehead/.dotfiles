@@ -20,6 +20,7 @@ done
 source $dir/PS1
 source $dir/keymap
 
+source /etc/bash_completion
 unset dir
 
 

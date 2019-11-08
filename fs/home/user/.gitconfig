@@ -34,4 +34,5 @@
 
 
 ### Machine specific config
-
+[google]
+	uplink = true
