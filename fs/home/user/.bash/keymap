@@ -7,3 +7,6 @@ for f in $(ls -1 $dir/xmodmap/); do
   xmodmap $dir/xmodmap/$f 2>/dev/null
 done
 
+unset dir
+unset f
+
