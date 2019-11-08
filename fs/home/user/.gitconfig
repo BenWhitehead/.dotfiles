@@ -8,6 +8,7 @@
 	autocrlf = input
   ignorecase = false
   pager = cat
+  excludesfile = ~/.gitignore
 [color]
 	whitespace = trailing-space,space-before-tab,tab-in-indent
 [color "diff"]
@@ -32,6 +33,9 @@
 [alias]
   co-pr = "!f() { git fetch ${2:-origin} pull/$1/${3:-head}:pull/$1/${3:-head} && git checkout pull/$1/${3:-head}; }; f"
 
-
 ### Machine specific config
+[credential "https://source.developers.google.com"]
+  helper = gcloud.sh
 
+[http]
+	cookiefile = /usr/local/google/home/benwhitehead/.gitcookies

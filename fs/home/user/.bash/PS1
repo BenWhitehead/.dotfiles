@@ -33,9 +33,9 @@ PS_LIGHTPURPLE='\[\e[1;35m\]'
 PS_LIGHTCYAN='\[\e[1;36m\]'
 PS_WHITE='\[\e[1;37m\]'
 
-MAIN=$PS_GREEN
-OFF=$PS_CYAN
-GIT_STATUS=$PS_LIGHTBLUE
+MAIN='\[\e[38;5;0m\]\[\e[48;5;97m\]'
+OFF='\[\e[38;5;32m\]\[\e[48;5;0m\]'
+GIT_STATUS='\[\e[38;5;174m\]\[\e[48;5;0m\]'
 
 #PS1="$MAIN\h$OFF \w $GIT_STATUS\$(ps1_parse_git_branch)$MAIN❱$PS_NC "
 eval "$(starship init bash)"

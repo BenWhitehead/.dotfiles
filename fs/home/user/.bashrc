@@ -2,6 +2,7 @@
 
 export dir=~/.bash
 
+PATH="/usr/local/bin:$PATH" # for pip3...
 PATH="$HOME/bin:$PATH"
 
 
