@@ -2,7 +2,7 @@
 
 #alias mvn='mvn -U'
 alias mvntestall='mvn -Dtest.excludes=none'
-alias mvntestnone='mvn -Dmaven.test.skip=true'
+alias mvntestnone='mvn -Dmaven.test.skip.exec=true'
 alias mvndownloadall='mvn dependency:sources dependency:resolve -Dclassifier=javadoc'
 #alias mvnrelease='mvn release:clean release:prepare release:perform -Darguments="-Dmaven.test.skip=true"'
 #alias mvndeploy='mvn -Dmaven.test.skip=true clean install source:jar javadoc:jar deploy'
