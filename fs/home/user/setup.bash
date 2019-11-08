@@ -44,6 +44,7 @@ function installPackages() {
   WHITELIST="${WHITELIST} tmux"
   WHITELIST="${WHITELIST} tree"
   WHITELIST="${WHITELIST} xclip"
+  WHITELIST="${WHITELIST} pv"
 
   # mesos build deps
   WHITELIST="${WHITELIST} automake"
@@ -63,6 +64,9 @@ function installPackages() {
   
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
+
+  # Rust packages to install
+  # cargo install exa ripgrep bat fd-find xsv xv
 }
 
  
