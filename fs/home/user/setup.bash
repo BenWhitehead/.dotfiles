@@ -142,6 +142,18 @@ function linkItems {
 
 }
 
+function configureMaven() { ( 
+  for t in $(find ./ -maxdepth 1 -type f -name 'apache-maven-*-bin.tar.gz' | sort -r); do
+    tar xf $t
+    dirName=$(echo $t | sed -e 's#^\./##g' | sed -e 's#-bin.tar.gz##g')
+    majMin=$(echo $dirName | sed -e 's#apache-maven-##g' | cut -d'.' -f1-2)
+    maj=$(echo $majMin | cut -d'.' -f1)
+    ln -s $dirName $majMin 2>/dev/null || true
+    ln -s $majMin $maj 2>/dev/null || true
+    ln -s $maj latest 2>/dev/null || true
+  done
+) }
+
 function main {(
 
   purgePackages
