@@ -19,6 +19,9 @@
   textconv = unzip -c -a
 [pager]
   diff = less
+[pull]
+	ff = only
 
 [alias]
-    co-pr = "!f() { git fetch ${2:-origin} pull/$1/head:pull-$1 && git checkout pull-$1; }; f"
+  co-pr = "!f() { git fetch ${2:-origin} pull/$1/head:pull-$1 && git checkout pull-$1; }; f"
+
