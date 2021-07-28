@@ -130,6 +130,9 @@ function linkItems {
  
     rm -rf .gitconfig
     ln -s ${scriptDir}/.gitconfig
+
+    rm -rf .ripgreprc
+    ln -s ${scriptDir}/.ripgreprc
   )
 
   (
