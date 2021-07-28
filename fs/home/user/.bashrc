@@ -23,7 +23,3 @@ source $dir/keymap
 unset dir
 
 
-#if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-#    tmux a || tmux
-#fi
-
