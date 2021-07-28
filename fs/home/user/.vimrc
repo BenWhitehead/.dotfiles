@@ -19,6 +19,8 @@ Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 
+Bundle 'udalov/javap-vim'
+
 Bundle 'derekwyatt/vim-scala'
 
 Bundle 'Keithbsmiley/tmux.vim'
