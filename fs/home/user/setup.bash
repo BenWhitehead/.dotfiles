@@ -67,6 +67,8 @@ function installPackages() {
 
   # Rust packages to install
   # cargo install exa ripgrep bat fd-find xsv xv
+  # ps -> procs nano -> kibi du-dust -> dust time -> hyperfine top -> ytop iftop -> bandwhich
+  # hexdump -> hx objdump -> bingrep
 }
 
  
