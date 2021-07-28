@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function findinjar() {
-    for jar in `find . -iname \*.jar`; do echo "$jar: "; jar tvf $jar | grep $1; done
+    for jar in `find . -iname \*.jar | sort -u`; do echo "$jar: "; jar tvf $jar | grep $1; done
 }
 
 function gcstat() {
