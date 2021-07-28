@@ -11,6 +11,8 @@
 	whitespace = trailing-space,space-before-tab,tab-in-indent
 [color "diff"]
   whitespace = blue reverse
+[commit]
+  cleanup=scissors
 [diff]
   algorithm = patience
   renames = copies
