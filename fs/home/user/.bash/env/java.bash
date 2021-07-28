@@ -1,5 +1,9 @@
 #!/bin/bash
 
+export JAVA_17_HOME=~/opt/java/17
+export JAVA_16_HOME=~/opt/java/16
+export JAVA_15_HOME=~/opt/java/15
+export JAVA_14_HOME=~/opt/java/14
 export JAVA_13_HOME=~/opt/java/13
 export JAVA_12_HOME=~/opt/java/12
 export JAVA_11_HOME=~/opt/java/11
