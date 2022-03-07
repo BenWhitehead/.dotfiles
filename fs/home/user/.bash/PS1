@@ -37,4 +37,6 @@ MAIN=$PS_GREEN
 OFF=$PS_CYAN
 GIT_STATUS=$PS_LIGHTBLUE
 
-PS1="$MAIN\h:$OFF \w $GIT_STATUS\$(ps1_parse_git_branch)$MAIN>$PS_NC "
+#PS1="$MAIN\h$OFF \w $GIT_STATUS\$(ps1_parse_git_branch)$MAIN❱$PS_NC "
+eval "$(starship init bash)"
+

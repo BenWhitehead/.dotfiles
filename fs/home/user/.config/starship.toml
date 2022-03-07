@@ -1,0 +1,179 @@
+# Config docs: https://starship.rs/config/#git-branch
+#
+# ANSI color code render https://i.stack.imgur.com/KTSQa.png
+# Icons from https://www.nerdfonts.com/cheat-sheet
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = """
+$docker_context\
+$package\
+$cmake\
+$cobol\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+${custom.java_repo}\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$sudo\
+$username\
+$hostname \
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+${custom.git_dir_start}\
+$git_branch\
+$git_commit\
+$git_state\
+${custom.git_dir_end}\
+$hg_branch\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+ $character"""
+
+[username]
+disabled = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "fg:0 bg:97"
+
+[directory]
+truncation_length = -1
+truncate_to_repo = false
+style = "fg:32"
+
+# TODO: maybe enable package without the icon
+[package]
+disabled = true
+
+[python]
+pyenv_version_name = true
+detect_extensions = []
+format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
+style = 'fg:0 bg:28'
+
+[character]
+success_symbol = "[ ❯](fg:black bg:97)"
+error_symbol = "[✗❯](fg:black bg:97)"
+
+[cmd_duration]
+disabled = true
+
+[gcloud]
+format = '[$symbol$account ]($style)'
+symbol = '  '
+style = 'fg:250 bg:62'
+
+[sudo]
+format = '[ $symbol]($style)'
+style = 'fg:255 bg:18'
+disabled = false
+
+[git_branch]
+format = '[$symbol$branch]($style)'
+style = 'fg:180'
+symbol = ' '
+only_attached = true
+
+[git_commit]
+format = '[( $hash)($tag)]($style)'
+style = 'fg:180'
+
+[git_state]
+format = '[ $state $progress_current/$progress_total]($style)'
+
+[git_metrics]
+disabled = true
+
+[git_status]
+disabled = true
+
+[custom.git_dir_start]
+when = 'git rev-parse --is-inside-work-tree 2>/dev/null'
+format = '[\[]($style)'
+style = 'fg:180'
+
+[custom.git_dir_end]
+when = 'git rev-parse --is-inside-work-tree 2>/dev/null'
+format = '[\] ]($style)'
+style = 'fg:180'
+
+# using custom.java_repo instead
+[java]
+format = '[${symbol}(${version} )]($style)'
+symbol = '☕'
+version_format = '${raw}'
+style = 'fg:none'
+disabled = true
+
+# TODO: make this more robust (i.e. gradle
+[custom.java_repo]
+format = '[ ${symbol}(${output}) ]($style)'
+symbol = '☕'
+style = 'fg:250 bg:52'
+when = 'git ls-files --full-name -- $(git rev-parse --show-toplevel)/pom.xml'
+# TODO: put this script into .dotfiles
+command = 'starship-java-version'
+
+
+[kotlin]
+format = '[$symbol$version ]($style)'
+version_format = '${raw}'
+style = 'fg:250 bg:52'
+symbol = '🅺'
+
+[scala]
+format = '[$symbol$version ]($style)'
+version_format = '${raw}'
+style = 'fg:250 bg:52'
+symbol = ''
+
+# TODO: possibly style things with less space and more fg/bg config
+#   Inspiration 
+#     https://github.com/starship/starship/discussions/1252#discussioncomment-1315026
+#     https://github.com/starship/starship/discussions/1252#discussioncomment-1902896
+#
