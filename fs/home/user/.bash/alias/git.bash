@@ -12,5 +12,5 @@ alias gfat='gfa --tags'
 alias gfap='gfa --prune --tags'
 alias gp='git pull'
 alias gr='git remote -v'
-alias gpum='git pull upstream master'
+alias gpum='git pull upstream main'
 
