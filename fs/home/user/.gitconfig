@@ -20,8 +20,16 @@
 [diff "zip"]
   textconv = unzip -c -a
 [pager]
-  diff = less
-  log = less
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[delta]
+  line-numbers = true
+  side-by-side = true
+  syntax-theme = TwoDark
+
 [pull]
 	ff = only
 
