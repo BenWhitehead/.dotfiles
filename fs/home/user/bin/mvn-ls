@@ -1,0 +1,28 @@
+#!/bin/bash
+set -o errexit -o nounset -o pipefail
+
+function main() { (
+  gav=($(echo $1 | sed -E 's/^(.*):(.*).*$/\1\n\2/g'))
+  groupId=${gav[0]}
+  artifactId=${gav[1]}
+
+  url="https://repo1.maven.org/maven2/$(echo "$groupId" | sed -E 's#\.#/#g')/$artifactId/maven-metadata.xml"
+
+  curl --silent --show-error --fail "$url" \
+    | dasel -r xml -w json \
+    | jq -r '.metadata.versioning.versions.version[]'
+
+
+) }
+
+function now { date +"%Y-%m-%d %H:%M:%S" | tr -d '\n' ;}
+function msg { println "$(now) $*" >&2 ;}
+function err { local x=$? ; msg "$*" ; return $(( $x == 0 ? 1 : $x )) ;}
+function println { printf '%s\n' "$*" ;}
+function print { printf '%s ' "$(now) $*" ;}
+
+if [[ ${1:-} ]] && declare -F | cut -d' ' -f3 | fgrep -qx -- "${1:-}"
+then "$@"
+else main "$@"
+fi
+

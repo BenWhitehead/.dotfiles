@@ -1,0 +1,37 @@
+#!/bin/bash
+set -o errexit -o nounset -o pipefail
+
+function main() { (
+  gav=($(echo $1 | sed -E 's/^(.*):(.*):(.*)$/\1\n\2\n\3/g'))
+  groupId=${gav[0]}
+  artifactId=${gav[1]}
+  version=${gav[2]}
+  # temp file for the pom we're going to template
+  tmp_pom=$(mktemp -t --suffix='.xml' "mvn-list-deps_pom_XXXXXX")
+  # temp file for the output effective pom.xml
+  tmp_pom_eff=$(mktemp -t --suffix='.xml' "mvn-list-deps_deps_XXXXXX")
+
+    cat > "$tmp_pom" <<-EOF
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tmp</groupId>
+  <artifactId>$artifactId-$version</artifactId>
+  <version>987654-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>$groupId</groupId>
+      <artifactId>$artifactId</artifactId>
+      <version>$version</version>
+    </dependency>
+  </dependencies>
+</project>
+EOF
+  mvn -f "$tmp_pom" dependency:list
+
+  rm "$tmp_pom_eff" "$tmp_pom"
+
+) }
+
+main $@

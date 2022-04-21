@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# TODO: turn into an array expansion to allow multiple includes
+JAVA_HOME=$JAVA_11_HOME mvn dependency:tree -Dincludes=$@
+

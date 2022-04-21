@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mvn help:active-profiles dependency:tree $@
+

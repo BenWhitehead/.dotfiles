@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function main() {
+  mvn -DfailOnError=false clirr:check
+}
+
+function mainTrim() {
+  main | rg '^\[INFO\] +Building|^\[ERROR\]' | grep -v 'deprecated'
+  # rg '^\[ERROR' | sort -u | column -t -s ' '
+}
+
+mainTrim

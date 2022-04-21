@@ -1,0 +1,50 @@
+#!/bin/bash
+set -o errexit -o nounset -o pipefail
+
+function main() { (
+  gav=($(echo $1 | sed -E 's/^(.*):(.*):(.*)$/\1\n\2\n\3/g'))
+  groupId=${gav[0]}
+  artifactId=${gav[1]}
+  version=${gav[2]}
+  # check if the artifact exists in maven central
+  # mainly useful to try and detect typos
+  url="https://repo1.maven.org/maven2/$(echo "$groupId" | sed -e 's#\.#/#g')/$artifactId/$version/$artifactId-$version.pom"
+  curl --silent --show-error --fail --head "$url" > /dev/null
+
+  # temp file for the pom we're going to template
+  tmp_pom=$(mktemp -t --suffix='.xml' "mvn-bom-list-deps_pom_XXXXXX")
+  # temp file for the output effective pom.xml
+  tmp_pom_eff=$(mktemp -t --suffix='.xml' "mvn-bom-list-deps_pom-effective_XXXXXX")
+
+    cat > "$tmp_pom" <<-EOF
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tmp</groupId>
+  <artifactId>$artifactId-$version</artifactId>
+  <version>987654-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>$groupId</groupId>
+        <artifactId>$artifactId</artifactId>
+        <version>$version</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
+EOF
+  mvn -f "$tmp_pom" help:effective-pom -Doutput="$tmp_pom_eff" -Dverbose=true >/dev/null 2>&1
+
+  cat "$tmp_pom_eff" \
+    | dasel -r xml -w json \
+    | jq -r '.project.dependencyManagement.dependencies[] | .[] | "\(.groupId):\(.artifactId):\(.version)"'
+
+  rm "$tmp_pom_eff" "$tmp_pom"
+
+) }
+
+main $@
