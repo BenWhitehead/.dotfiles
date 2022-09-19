@@ -79,12 +79,12 @@ disabled = true
 [hostname]
 ssh_only = false
 format = "[$hostname]($style)"
-style = "fg:0 bg:97"
+style = "fg:2 "
 
 [directory]
 truncation_length = -1
 truncate_to_repo = false
-style = "fg:32"
+style = "fg:6"
 
 # TODO: maybe enable package without the icon
 [package]
@@ -97,8 +97,8 @@ format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
 style = 'fg:0 bg:28'
 
 [character]
-success_symbol = "[ ❯](fg:black bg:97)"
-error_symbol = "[✗❯](fg:black bg:97)"
+success_symbol = "[ ❯](fg:2 bg:0)"
+error_symbol = "[✗❯](fg:1 bg:0)"
 
 [cmd_duration]
 disabled = true
