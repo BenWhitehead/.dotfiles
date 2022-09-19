@@ -2,5 +2,5 @@ export LS_COLORS="no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40
 export LS_OPTIONS="-N --color=tty -T 0"
 
 export EXA_OPTIONS="--color=auto --sort .name"
-export EXA_OPTIONS_LONG="$EXA_OPTIONS --long --group --git --links"
+export EXA_OPTIONS_LONG="$EXA_OPTIONS --long --group --links"
 
