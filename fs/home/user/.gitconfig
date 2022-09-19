@@ -3,6 +3,7 @@
 	email = BenWhitehead@users.noreply.github.com
 [push]
 	default = simple
+	autoSetupRemote = true
 [core]
 	autocrlf = input
   ignorecase = false
