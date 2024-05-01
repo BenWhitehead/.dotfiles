@@ -22,6 +22,9 @@ source $dir/PS1
 source $dir/keymap
 
 source /etc/bash_completion
+source $HOME/opt/mvnd/latest/bin/mvnd-bash-completion.bash
 unset dir
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
