@@ -2,7 +2,8 @@
 set -o errexit -o nounset -o pipefail
 
 function main() { (
-  gav=($(echo $1 | sed -E 's/^(.*):(.*):(.*)$/\1\n\2\n\3/g'))
+  args=($@)
+  gav=($(echo ${args[0]} | sed -E 's/^(.*):(.*):(.*)$/\1\n\2\n\3/g'))
   groupId=${gav[0]}
   artifactId=${gav[1]}
   version=${gav[2]}
@@ -28,7 +29,7 @@ function main() { (
   </dependencies>
 </project>
 EOF
-  mvn -f "$tmp_pom" dependency:list
+  mvn -f "$tmp_pom" dependency:list ${args[@]:1}
 
   rm "$tmp_pom_eff" "$tmp_pom"
 

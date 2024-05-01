@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mvn dependency:analyze -DfailOnWarning=true
+mvn dependency:analyze -DfailOnWarning=true ${@}
 

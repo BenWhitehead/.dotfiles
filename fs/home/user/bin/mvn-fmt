@@ -1,4 +1,4 @@
 #!/bin/bash
 
-JAVA_HOME=$JAVA_11_HOME mvn com.coveo:fmt-maven-plugin:format | rg --color=never 'Building|Processed|BUILD'
+mvnd com.coveo:fmt-maven-plugin:format | rg --color=never 'Building|Processed|BUILD'
 

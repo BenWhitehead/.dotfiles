@@ -6,7 +6,7 @@ function main() { (
   groupId=${gav[0]}
   artifactId=${gav[1]}
 
-  url="https://repo1.maven.org/maven2/$(echo "$groupId" | sed -E 's#\.#/#g')/$artifactId/maven-metadata.xml"
+  url="https://repo1.maven.org/maven2/$(echo "$groupId" | sed -E 's#\.#/#g')/$artifactId/maven-metadata.xml?cacheBuster=$(date --utc '+%Y%m%d%H%M%S')"
 
   curl --silent --show-error --fail "$url" \
     | dasel -r xml -w json \
