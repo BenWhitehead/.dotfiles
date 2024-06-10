@@ -35,7 +35,7 @@ function _javap() {
 }
 
 function _findClassFile() { (
-  find ./ -type f -name '*.class' | sort | awk '(n=gsub(/[^\/]+/,"&"))<m || NR==1{m=n;p=$0} END{print p}'
+  find ./ -type f -name '*.class' ! -path '*META-INF/versions/*' ! -path '*module-info.class' | sort | awk '(n=gsub(/[^\/]+/,"&"))<m || NR==1{m=n;p=$0} END{print p}'
 ) }
 
 function main() { (
