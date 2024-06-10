@@ -104,7 +104,7 @@ error_symbol = "[✗❯](fg:black bg:97)"
 disabled = true
 
 [gcloud]
-format = '[$symbol$account ]($style)'
+format = '[$symbol$account(@$project) ]($style)'
 symbol = '  '
 style = 'fg:250 bg:62'
 
