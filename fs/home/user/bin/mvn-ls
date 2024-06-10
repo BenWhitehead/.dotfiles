@@ -1,13 +1,17 @@
 #!/bin/bash
 set -o errexit -o nounset -o pipefail
 
+VERBOSE=${VERBOSE:-false}
+
 function main() { (
   gav=($(echo $1 | sed -E 's/^(.*):(.*).*$/\1\n\2/g'))
   groupId=${gav[0]}
   artifactId=${gav[1]}
 
   url="https://repo1.maven.org/maven2/$(echo "$groupId" | sed -E 's#\.#/#g')/$artifactId/maven-metadata.xml?cacheBuster=$(date --utc '+%Y%m%d%H%M%S')"
-
+  if ${VERBOSE}; then
+    msg $url
+  fi
   curl --silent --show-error --fail "$url" \
     | dasel -r xml -w json \
     | jq -r '.metadata.versioning.versions.version[]'
