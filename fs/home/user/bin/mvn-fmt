@@ -1,4 +1,10 @@
 #!/bin/bash
 
-mvnd com.coveo:fmt-maven-plugin:format | rg --color=never 'Building|Processed|BUILD'
+function main() { (
 
+  export JAVA_HOME=$JAVA_17_HOME
+  mvnd --batch-mode com.spotify.fmt:fmt-maven-plugin:format | rg --color=never 'Building|Processed|BUILD'
+  #mvnd com.coveo:fmt-maven-plugin:format
+) }
+
+main

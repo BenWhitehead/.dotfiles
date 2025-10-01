@@ -42,28 +42,39 @@ function main() { (
 
   local pwd=$(pwd)
   local uri=$1
-  local    groupId=$(echo ${1} | sed -E 's/^(.+?):(.+)$/\1/g' | sed -E 's#\.#/#g')
-  local artifactId=$(echo ${1} | sed -E 's/^(.+?):(.+)$/\2/g')
+  # groupId:artifactId:version[:packaging[:classifier]]
+  local    groupId=$(echo ${1} | awk -F ':' '{print $1}')
+  local artifactId=$(echo ${1} | awk -F ':' '{print $2}')
+#  local    version=$(echo ${1} | awk -F ':' '{print $3}')
+  local  packaging=$(echo ${1} | awk -F ':' '{print $4}')
+  local classifier=$(echo ${1} | awk -F ':' '{print $5}')
 
-  local artifactDir="${M2_REPOSITORY}/${groupId}/${artifactId}"
+  packaging=${packaging:-"jar"}
+  local classifierZ="-${classifier:-}"
+  if [[ "-" == "${classifierZ}" ]]; then
+    classifierZ=""
+  fi
+  local gPath=$(echo $groupId | sed -E 's#\.#/#g')
+
+  local artifactDir="${M2_REPOSITORY}/${gPath}/${artifactId}"
   local versions=""
   pushd $artifactDir >/dev/null
     versions=$(find ./ -mindepth 1 -maxdepth 1 -type d  | sed 's#^\./##g' | sort -V)
   popd >/dev/null
 
   for version in ${versions}; do
-    msg "$uri:$version"
+    msg "${groupId}:${artifactId}:${version}:${packaging}:${classifier}"
     local tmpDir="${TMPDIR}/javapMavenJars/${version}"
     mkdir -p ${tmpDir}
 #    TODO: Improve file existence checking and handling
     pushd ${tmpDir} >/dev/null
-      jarPath="${artifactDir}/${version}/${artifactId}-${version}.jar"
+      jarPath="${artifactDir}/${version}/${artifactId}-${version}${classifierZ}.${packaging}"
       if [ -f ${jarPath} ]; then
         unzip -u -o ${jarPath} > /dev/null 2>&1
         className="${2:-$(_findClassFile)}"
         msg "  $(_javap ${className})"
       else
-        msg "jar file not found for version ${version}, skipping"
+        msg "${packaging} file not found for version ${version}, skipping"
       fi
     popd >/dev/null
   done

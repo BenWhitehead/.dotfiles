@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 export dir=~/.bash
 
@@ -21,7 +21,7 @@ done
 source $dir/PS1
 source $dir/keymap
 
-source /etc/bash_completion
+source /etc/bash_completion 2>/dev/null || true
 source $HOME/opt/mvnd/latest/bin/mvnd-bash-completion.bash
 unset dir
 

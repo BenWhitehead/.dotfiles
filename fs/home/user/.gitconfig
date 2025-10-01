@@ -22,10 +22,10 @@
 [diff "zip"]
   textconv = unzip -c -a
 [pager]
-  diff = less
-  log = less
-  reflog = less
-  show = less
+  diff = less -F
+  log = less -F
+  reflog = less -F
+  show = less -F
 
 [pull]
 	ff = only

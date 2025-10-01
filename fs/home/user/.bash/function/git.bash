@@ -7,6 +7,9 @@ function gitAuthorLineCount() {
 function gitAuthorLineCountFilterExtension() {
   git ls-tree --name-only -r HEAD | grep -E "\.($1)$" | xargs -n1 git blame --line-porcelain | grep "^author " | sort | uniq -c | sort -nr
 }
+function gitAuthorLineCountFilterFullPath() {
+  git ls-tree --name-only -r HEAD | grep -E "$1" | xargs -n1 git blame --line-porcelain | grep "^author " | sort | uniq -c | sort -nr
+}
 
 # find current files with most commits, including renames
 # Found on: http://stackoverflow.com/a/20808251
