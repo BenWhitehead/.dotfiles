@@ -53,6 +53,9 @@ highlight Search ctermbg=DarkMagenta ctermfg=White
 
 noremap q <Nop>
 
+"as of 2023-01-23 this seems to be necessary on debian testing track
+set backspace=indent,eol,start
+
 " skeletons
 function! SKEL_spec()
 	0r /usr/share/vim/current/skeletons/skeleton.spec
