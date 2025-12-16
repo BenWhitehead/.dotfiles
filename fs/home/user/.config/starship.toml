@@ -7,6 +7,7 @@
 add_newline = false
 
 format = """
+${custom.docker_container}\
 $docker_context\
 $package\
 $cmake\
@@ -104,7 +105,7 @@ error_symbol = "[✗❯](fg:1 bg:0)"
 disabled = true
 
 [gcloud]
-format = '[$symbol$account ]($style)'
+format = '[$symbol$account(@$project) ]($style)'
 symbol = '  '
 style = 'fg:250 bg:62'
 
@@ -159,6 +160,12 @@ when = 'git ls-files --full-name -- $(git rev-parse --show-toplevel)/pom.xml'
 # TODO: put this script into .dotfiles
 command = 'starship-java-version'
 
+[custom.docker_container]
+format = '[${symbol} ${output} ]($style)'
+symbol = '🐳'
+when = '/bin/bash -c "if [ ! -z ${_CONTAINER_NAME+x} ]; then exit 0; else exit 1; fi;"'
+style = 'fg:250 bg:25'
+command = '/bin/bash -c "echo ${_CONTAINER_NAME}"'
 
 [kotlin]
 format = '[$symbol$version ]($style)'
@@ -171,6 +178,9 @@ format = '[$symbol$version ]($style)'
 version_format = '${raw}'
 style = 'fg:250 bg:52'
 symbol = ''
+
+[jobs]
+disabled = true
 
 # TODO: possibly style things with less space and more fg/bg config
 #   Inspiration 
