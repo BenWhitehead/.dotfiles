@@ -156,7 +156,6 @@ format = '[ ${symbol}(${output}) ]($style)'
 symbol = '☕'
 style = 'fg:250 bg:52'
 when = 'git ls-files --full-name -- $(git rev-parse --show-toplevel)/pom.xml'
-# TODO: put this script into .dotfiles
 command = 'starship-java-version'
 
 

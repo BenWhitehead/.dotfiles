@@ -20,9 +20,6 @@ function __activateJavaHome() {
 alias  j8='__activateJavaHome $JAVA_8_HOME'
 alias j11='__activateJavaHome $JAVA_11_HOME'
 alias j17='__activateJavaHome $JAVA_17_HOME'
-alias j19='__activateJavaHome $JAVA_19_HOME'
-alias j20='__activateJavaHome $JAVA_20_HOME'
 alias j21='__activateJavaHome $JAVA_21_HOME'
-alias j22='__activateJavaHome $JAVA_22_HOME'
-alias j23='__activateJavaHome $JAVA_23_HOME'
+alias j25='__activateJavaHome $JAVA_25_HOME'
 
