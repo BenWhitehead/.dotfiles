@@ -1,4 +1,4 @@
 #!/bin/bash
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+alias pbcopy='wl-copy'
+alias pbpaste='wl-paste'
