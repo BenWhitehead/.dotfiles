@@ -1,0 +1,347 @@
+[
+  {
+    "settings": {
+      "disableAll": false,
+      "exposeIframes": false,
+      "exposeStyleName": false,
+      "keepAlive": 0,
+      "keepAliveIdle": false,
+      "newStyleAsUsercss": true,
+      "openEditInWindow": true,
+      "openEditInWindow.popup": false,
+      "patchCsp": false,
+      "show-badge": true,
+      "styleViaASS": false,
+      "styleViaXhr": false,
+      "urlInstaller": true,
+      "windowPosition": {
+        "height": 1243,
+        "left": 0,
+        "top": 0,
+        "width": 1953
+      },
+      "compactWidth": 850,
+      "config.autosave": true,
+      "schemeSwitcher.enabled": "system",
+      "schemeSwitcher.nightStart": "18:00",
+      "schemeSwitcher.nightEnd": "06:00",
+      "popup.enabledFirst": true,
+      "popup.stylesFirst": true,
+      "popup.autoResort": false,
+      "popup.borders": false,
+      "popup.findSort": "u",
+      "manage.onlyEnabled": false,
+      "manage.onlyLocal": false,
+      "manage.onlyUsercss": false,
+      "manage.onlyEnabled.invert": false,
+      "manage.onlyLocal.invert": false,
+      "manage.onlyUsercss.invert": false,
+      "manage.actions.expanded": false,
+      "manage.backup.expanded": true,
+      "manage.filters.expanded": true,
+      "manage.links.expanded": true,
+      "manage.minColumnWidth": 750,
+      "manage.newUI": true,
+      "manage.newUI.favicons": false,
+      "manage.newUI.faviconsGray": true,
+      "manage.newUI.targets": 3,
+      "manage.newUI.sort": "title,asc",
+      "manage.searchMode": "meta",
+      "editor.options": {},
+      "editor.toc.expanded": true,
+      "editor.options.expanded": true,
+      "editor.options.style.expanded": true,
+      "editor.lint.expanded": true,
+      "editor.publish.expanded": true,
+      "editor.lineWrapping": true,
+      "editor.smartIndent": true,
+      "editor.indentWithTabs": false,
+      "editor.tabSize": 4,
+      "editor.keyMap": "default",
+      "editor.theme": "default",
+      "editor.beautify": {
+        "end_with_newline": false,
+        "indent_conditional": true,
+        "newline_after_open_brace": true,
+        "newline_before_close_brace": true,
+        "newline_before_open_brace": false,
+        "newline_between_properties": true,
+        "newline_between_rules": false,
+        "preserve_newlines": true,
+        "selector_separator_newline": true
+      },
+      "editor.beautify.hotkey": "",
+      "editor.lintDelay": 300,
+      "editor.linter": "csslint",
+      "editor.lintReportDelay": 500,
+      "editor.matchHighlight": "token",
+      "editor.autoCloseBrackets": true,
+      "editor.autocompleteOnTyping": false,
+      "editor.contextDelete": true,
+      "editor.selectByTokens": true,
+      "editor.arrowKeysTraverse": true,
+      "editor.appliesToLineWidget": true,
+      "editor.autosaveDraft": 10,
+      "editor.livePreview": true,
+      "editor.livePreview.delay": 0.2,
+      "editor.targetsFirst": true,
+      "editor.colorpicker": true,
+      "editor.colorpicker.hexUppercase": false,
+      "editor.colorpicker.hotkey": "",
+      "editor.colorpicker.color": "",
+      "editor.colorpicker.maxHeight": 300,
+      "hotkey._execute_browser_action": "",
+      "hotkey.openManage": "",
+      "hotkey.styleDisableAll": "",
+      "sync.enabled": "none",
+      "iconset": 1,
+      "badgeDisabled": "#8B0000",
+      "badgeNormal": "#006666",
+      "headerWidth.edit": 280,
+      "headerWidth.install": 280,
+      "headerWidth.manage": 280,
+      "popup.search.globals": false,
+      "popupWidth": 246,
+      "popupWidthMax": 280,
+      "updateInterval": 24,
+      "updateOnlyEnabled": false,
+      "popup.breadcrumbs": null,
+      "popup.breadcrumbs.usePath": null,
+      "popup.findStylesInline": null
+    },
+    "order": {
+      "main": [],
+      "prio": []
+    }
+  },
+  {
+    "enabled": true,
+    "installDate": 1544133144231,
+    "name": "github.com",
+    "sections": [
+      {
+        "code": ".branch-action-item.open>.merge-status-list,\n.listgroup>.listgroup-overflow,\n.MergeBoxExpandable-module__isExpanded--Le972,\n.MergeBoxExpandable-module__isExpanded--PaOkp {\n\tmax-height:5000px;\n}\n\n.merge-status-item .css-truncate-target {\n    width: 75%;\n    max-width: 75%;\n}\n\n.merge-status-list .merge-status-item .col-10 {\n    width: 100%;\n    max-width: 100%;\n}\n\n.merge-status-list .d-flex.col-2 {\n    width: inherit;\n}\n.merge-status-list .d-flex.col-2 .label {\n    margin-right: 10px;\n}\n.blob-code-inner, code, .input-monospace, .highlight>pre, text-expander textarea {\n    font-family: \"Hack\" !important;\n    line-height: 1.2em !important;\n/*    color: black;*/\n}\n.merge-status-item strong,\ndiv#diff > div#toc.table-of-contents > ol > li > a {\n    font-family: \"Hack\" !important;\n    line-height: 1.2em !important;\n    font-size: 9pt;\n}\n.StatusCheckRow-module__titleHeader--Qx8JS span {\n    font-family: \"Hack\" !important;\n    line-height: 1.2em !important;\n    font-size: 9pt;\n    font-weight: 500;\n}\ntext-expander textarea {\n    font-size: 12px !important;\n}\n/*\n.merge-status-list .d-flex.col-2 .label,\n.merge-status-list .d-flex.col-2 .status-actions {\n    float: right;\n    text-align: right;\n}\n*/\n\n.file-header .diffstat {\n    display: inline-block !important;\n    min-width: 100px !important;\n    width: 100px !important;\n    text-align: right !important;\n}\n\n/*\n.file-header .file-info > a {\n    display: inline-block !important;\n    min-width: 100% !important;\n    width: 100% !important;\n    max-width: 100% !important;\n}\n*/\n/* longer file names */\na.css-truncate.css-truncate-target,\ndiv#diff > div#toc.table-of-contents > ol > li > a {\n  max-width: 1200px !important;\n}\n\n.copilotPreview__container {\n    display: none !important;\n}",
+        "domains": [
+          "github.com"
+        ]
+      }
+    ],
+    "id": 3,
+    "updateDate": 1755617013258,
+    "_id": "e5e595e4-f10c-4623-af83-6af9d40a42c2",
+    "_rev": 1755617013258
+  },
+  {
+    "enabled": true,
+    "installDate": 1586366222349,
+    "name": "shellcheck.net",
+    "sections": [
+      {
+        "code": "#editorwindow #input, #terminal {\n    font-family: \"Hack\";\n}",
+        "domains": [
+          "shellcheck.net"
+        ]
+      }
+    ],
+    "updateDate": 1586366295475,
+    "_id": "97abc067-28a1-4eae-b9c0-d23a902edba3",
+    "_rev": 1743537648983,
+    "id": 5
+  },
+  {
+    "enabled": true,
+    "installDate": 1714066088784,
+    "sections": [
+      {
+        "code": "/* ==UserStyle==\n@name         Wide GitHub\n@namespace    https://github.com/xthexder/wide-github\n@description  Change all GitHub repository and gist pages to be full width and dynamically sized.\n@author       xthexder\n@copyright    2013-2023, xthexder (https://github.com/xthexder)\n@contributor  Jason Frey (https://github.com/Fryguy)\n@contributor  Marti Martz (https://github.com/Martii)\n@contributor  Paul \"Joey\" Clark (https://github.com/joeytwiddle)\n@contributor  Robert Laverty (https://github.com/roblav96)\n@contributor  Amir Meimari (https://github.com/amirmeimari)\n@license      MIT; https://raw.githubusercontent.com/xthexder/wide-github/master/LICENSE\n@version      1.6.6\n@homepageURL  https://github.com/xthexder/wide-github\n@supportURL   https://github.com/xthexder/wide-github/issues\n==/UserStyle== */",
+        "start": 0
+      },
+      {
+        "code": "/* General full-page container */\nbody:not(.wgh-disabled) .application-main .container-xl {\n  max-width: none !important;\n}\n/* General content sub-container */\nbody:not(.wgh-disabled) .application-main .container-lg  {\n  max-width: none !important;\n  margin-left: 0px !important;\n}\n\n/* Repository home sidebar */\nbody:not(.wgh-disabled) .react-repos-overview-margin {\n  margin-right: 0;\n}\n\n/* Commit History and Branches page */\nbody:not(.wgh-disabled) #js-repo-pjax-container div[style^=\"--sticky-pane-height:\"] > div[class^='Box-sc-']:first-child {\n  max-width: none;\n}\n\n/* Repository Tags page */\nbody:not(.wgh-disabled) .application-main .col-11  {\n  width: 100%;\n}\n\n/* Issue list Assignee alignment */\nbody:not(.wgh-disabled) #js-repo-pjax-container .js-issue-row .text-right {\n  max-width: 303px !important;\n}\n\n/* New React layout (2024) */\n\n/* Issues list page */\nbody:not(.wgh-disabled) .application-main div[style^=\"--sticky-pane-height:\"] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-']:nth-child(2) > div[class^='Box-sc-'] {\n  max-width: none;\n}\n\n/* Issue page */\nbody:not(.wgh-disabled) #js-repo-pjax-container div[data-target=\"react-app.reactRoot\"] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n\n/* New React layout (2025) */\n\n/* Issues list page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='prc-PageLayout-Content-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n/* Issues list page (July 2025) */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='ThreePanesLayout-module__ThreePanesLayoutMiddleOnlyPane-'] {\n  max-width: none;\n}\n\n/* Issue page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n/* Issue page (July 2025)  */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='IssueViewer-module__issueViewerContainer-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n\n/* New issue page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='IssueCreatePage-module__createPaneContainer-'] {\n  max-width: none;\n}\n\n/* Commit list page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='prc-PageLayout-PageLayoutWrapper-'] {\n  max-width: none;\n}",
+        "start": 879,
+        "regexps": [
+          "^https://(?:gist\\.)?github\\.com/.*"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name         Wide GitHub\n@namespace    https://github.com/xthexder/wide-github\n@description  Change all GitHub repository and gist pages to be full width and dynamically sized.\n@author       xthexder\n@copyright    2013-2023, xthexder (https://github.com/xthexder)\n@contributor  Jason Frey (https://github.com/Fryguy)\n@contributor  Marti Martz (https://github.com/Martii)\n@contributor  Paul \"Joey\" Clark (https://github.com/joeytwiddle)\n@contributor  Robert Laverty (https://github.com/roblav96)\n@contributor  Amir Meimari (https://github.com/amirmeimari)\n@license      MIT; https://raw.githubusercontent.com/xthexder/wide-github/master/LICENSE\n@version      1.6.6\n@homepageURL  https://github.com/xthexder/wide-github\n@supportURL   https://github.com/xthexder/wide-github/issues\n==/UserStyle== */\n\n@-moz-document regexp(\"^https://(?:gist\\\\.)?github\\\\.com/.*\") {\n\n/* General full-page container */\nbody:not(.wgh-disabled) .application-main .container-xl {\n  max-width: none !important;\n}\n/* General content sub-container */\nbody:not(.wgh-disabled) .application-main .container-lg  {\n  max-width: none !important;\n  margin-left: 0px !important;\n}\n\n/* Repository home sidebar */\nbody:not(.wgh-disabled) .react-repos-overview-margin {\n  margin-right: 0;\n}\n\n/* Commit History and Branches page */\nbody:not(.wgh-disabled) #js-repo-pjax-container div[style^=\"--sticky-pane-height:\"] > div[class^='Box-sc-']:first-child {\n  max-width: none;\n}\n\n/* Repository Tags page */\nbody:not(.wgh-disabled) .application-main .col-11  {\n  width: 100%;\n}\n\n/* Issue list Assignee alignment */\nbody:not(.wgh-disabled) #js-repo-pjax-container .js-issue-row .text-right {\n  max-width: 303px !important;\n}\n\n/* New React layout (2024) */\n\n/* Issues list page */\nbody:not(.wgh-disabled) .application-main div[style^=\"--sticky-pane-height:\"] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-']:nth-child(2) > div[class^='Box-sc-'] {\n  max-width: none;\n}\n\n/* Issue page */\nbody:not(.wgh-disabled) #js-repo-pjax-container div[data-target=\"react-app.reactRoot\"] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n\n/* New React layout (2025) */\n\n/* Issues list page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='prc-PageLayout-Content-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n/* Issues list page (July 2025) */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='ThreePanesLayout-module__ThreePanesLayoutMiddleOnlyPane-'] {\n  max-width: none;\n}\n\n/* Issue page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n/* Issue page (July 2025)  */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='IssueViewer-module__issueViewerContainer-'] > div[class^='Box-sc-'] {\n  max-width: none;\n}\n\n/* New issue page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='IssueCreatePage-module__createPaneContainer-'] {\n  max-width: none;\n}\n\n/* Commit list page */\nbody:not(.wgh-disabled) .application-main div[data-target=\"react-app.reactRoot\"] div[class^='prc-PageLayout-PageLayoutWrapper-'] {\n  max-width: none;\n}\n\n    \n\n}",
+    "usercssData": {
+      "name": "Wide GitHub",
+      "namespace": "https://github.com/xthexder/wide-github",
+      "description": "Change all GitHub repository and gist pages to be full width and dynamically sized.",
+      "author": "xthexder",
+      "license": "MIT; https://raw.githubusercontent.com/xthexder/wide-github/master/LICENSE",
+      "version": "1.6.6",
+      "homepageURL": "https://github.com/xthexder/wide-github",
+      "supportURL": "https://github.com/xthexder/wide-github/issues"
+    },
+    "author": "xthexder",
+    "description": "Change all GitHub repository and gist pages to be full width and dynamically sized.",
+    "url": "https://github.com/xthexder/wide-github",
+    "name": "Wide GitHub",
+    "updateDate": 1755287063357,
+    "_id": "9a314cbd-8008-4afe-a420-b2c44e90418d",
+    "_rev": 1755287063357,
+    "id": 7
+  },
+  {
+    "enabled": true,
+    "installDate": 1746632515678,
+    "sections": [
+      {
+        "code": "/* ==UserStyle==\n@name           doc.rust-lang.org\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */",
+        "start": 0
+      },
+      {
+        "code": "/* Insert code here... */\n    *, code, .code-header {\n        font-family: Hack !important;\n    }",
+        "start": 232,
+        "domains": [
+          "doc.rust-lang.org"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           doc.rust-lang.org\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n\n@-moz-document domain(\"doc.rust-lang.org\") {\n    /* Insert code here... */\n    *, code, .code-header {\n        font-family: Hack !important;\n    }\n}",
+    "usercssData": {
+      "name": "doc.rust-lang.org",
+      "namespace": "github.com/openstyles/stylus",
+      "version": "1.0.0",
+      "description": "A new userstyle",
+      "author": "Me"
+    },
+    "author": "Me",
+    "description": "A new userstyle",
+    "name": "doc.rust-lang.org",
+    "updateDate": 1746632718998,
+    "_id": "1e37f3f5-9640-4856-9672-65d7ce72771f",
+    "_rev": 1746632718998,
+    "id": 8
+  },
+  {
+    "enabled": true,
+    "installDate": 1746633945195,
+    "sections": [
+      {
+        "code": "/* ==UserStyle==\n@name           rust-lang.github.io\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */",
+        "start": 0
+      },
+      {
+        "code": "/* Insert code here... */\n    * {\n        font-family: Hack !important;\n    }",
+        "start": 236,
+        "domains": [
+          "rust-lang.github.io"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           rust-lang.github.io\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n\n@-moz-document domain(\"rust-lang.github.io\") {\n    /* Insert code here... */\n    * {\n        font-family: Hack !important;\n    }\n}",
+    "usercssData": {
+      "name": "rust-lang.github.io",
+      "namespace": "github.com/openstyles/stylus",
+      "version": "1.0.0",
+      "description": "A new userstyle",
+      "author": "Me"
+    },
+    "author": "Me",
+    "description": "A new userstyle",
+    "name": "rust-lang.github.io",
+    "updateDate": 1746633945195,
+    "_id": "2792ce2d-bfae-440c-af18-2e9a5289e0fe",
+    "_rev": 1746633945195,
+    "id": 9
+  },
+  {
+    "enabled": true,
+    "installDate": 1746744330744,
+    "sections": [
+      {
+        "code": "/* ==UserStyle==\n@name           aip.dev\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */",
+        "start": 0
+      },
+      {
+        "code": "/* Insert code here... */\n    code, code * {\n        font-family: Hack !important;\n    }",
+        "start": 212,
+        "domains": [
+          "aip.dev"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           aip.dev\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n\n@-moz-document domain(\"aip.dev\") {\n    /* Insert code here... */\n    code, code * {\n        font-family: Hack !important;\n    }\n}",
+    "usercssData": {
+      "name": "aip.dev",
+      "namespace": "github.com/openstyles/stylus",
+      "version": "1.0.0",
+      "description": "A new userstyle",
+      "author": "Me"
+    },
+    "author": "Me",
+    "description": "A new userstyle",
+    "name": "aip.dev",
+    "updateDate": 1746744330744,
+    "_id": "6a57247a-3a98-489c-8221-aacff87d2850",
+    "_rev": 1746744330745,
+    "id": 10
+  },
+  {
+    "enabled": true,
+    "installDate": 1754433376113,
+    "sections": [
+      {
+        "code": "/* ==UserStyle==\n@name           central.sonatype.com/search\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */",
+        "start": 0
+      },
+      {
+        "code": "/* Insert code here... */\n    div.nx-search-dropdown div.nx-text-input {\n        width: 100%;\n        max-width: 100%;\n    }",
+        "start": 258,
+        "urlPrefixes": [
+          "https://central.sonatype.com/"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           central.sonatype.com/search\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n\n@-moz-document url-prefix(\"https://central.sonatype.com/\") {\n    /* Insert code here... */\n    div.nx-search-dropdown div.nx-text-input {\n        width: 100%;\n        max-width: 100%;\n    }\n}",
+    "usercssData": {
+      "name": "central.sonatype.com/search",
+      "namespace": "github.com/openstyles/stylus",
+      "version": "1.0.0",
+      "description": "A new userstyle",
+      "author": "Me"
+    },
+    "author": "Me",
+    "description": "A new userstyle",
+    "name": "central.sonatype.com/search",
+    "updateDate": 1754433924085,
+    "_id": "4281e06f-bc73-4c31-9239-296bca88f855",
+    "_rev": 1754433924085,
+    "id": 11
+  },
+  {
+    "enabled": true,
+    "installDate": 1757007070657,
+    "sections": [
+      {
+        "code": "/* ==UserStyle==\n@name           docs.rs\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */",
+        "start": 0
+      },
+      {
+        "code": "/* Insert code here... */\n    code {\n        font-family: \"Hack\" !important;\n    }",
+        "start": 212,
+        "domains": [
+          "docs.rs"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           docs.rs\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n\n@-moz-document domain(\"docs.rs\") {\n    /* Insert code here... */\n    code {\n        font-family: \"Hack\" !important;\n    }\n}",
+    "usercssData": {
+      "name": "docs.rs",
+      "namespace": "github.com/openstyles/stylus",
+      "version": "1.0.0",
+      "description": "A new userstyle",
+      "author": "Me"
+    },
+    "author": "Me",
+    "description": "A new userstyle",
+    "name": "docs.rs",
+    "updateDate": 1757007070657,
+    "_id": "6bdb321d-de9c-4bdd-968a-23fb29d67f19",
+    "_rev": 1757007070658,
+    "id": 11
+  }
+]
