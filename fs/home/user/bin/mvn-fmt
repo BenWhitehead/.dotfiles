@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mvnd com.coveo:fmt-maven-plugin:format | rg --color=never 'Building|Processed|BUILD'
+mvn com.spotify.fmt:fmt-maven-plugin:format | rg --color=never 'Building|Processed|BUILD'
 
