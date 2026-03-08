@@ -15,5 +15,5 @@ alias filecountall='echo "`pwd`: `ls -1aR | grep -v "\./" | grep -v "^$" | grep 
 
 alias esl='env | sort | less'
 
-alias cleanEmptyDirs='find ./ -type d -empty -delete'
+alias cleanEmptyDirs='find ./ -type d -empty -print -delete'
 
