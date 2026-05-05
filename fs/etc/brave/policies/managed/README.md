@@ -8,7 +8,6 @@
 | name               | id                                 | url                                                                                                         |
 |--------------------|------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | Stylus             | `clngdbkpkpeebahjckkjfobafhncgmne` | https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne                            |
-| Web Developer      | `bfbameneiokkgbdmiekhjnmfkcnldhhm` | https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm                     |
 | New Tab Switch     | `kmjejhpgeckcklfaodbginkjkfabldlc` | https://chromewebstore.google.com/detail/new-tab-switch/kmjejhpgeckcklfaodbginkjkfabldlc                    |
 | uBlock Origin      | `cjpalhdlnbpafiamejdnhcphjbkeiagm` |                                                                                                             |
 | Decentraleyes      | `ldpochfccmkkmhdbclfhpagapcfdljkj` | https://chromewebstore.google.com/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj                     |
