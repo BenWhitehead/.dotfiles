@@ -10,7 +10,6 @@
 | Stylus             | `clngdbkpkpeebahjckkjfobafhncgmne` | https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne                            |
 | New Tab Switch     | `kmjejhpgeckcklfaodbginkjkfabldlc` | https://chromewebstore.google.com/detail/new-tab-switch/kmjejhpgeckcklfaodbginkjkfabldlc                    |
 | uBlock Origin      | `cjpalhdlnbpafiamejdnhcphjbkeiagm` |                                                                                                             |
-| Decentraleyes      | `ldpochfccmkkmhdbclfhpagapcfdljkj` | https://chromewebstore.google.com/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj                     |
 | 1password          | `aeblfdkhhhdcdjpifhhbdiojplfjncoa` | https://chromewebstore.google.com/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa |
 
 ## Links
